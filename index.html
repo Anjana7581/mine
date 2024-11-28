@@ -3,61 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Babe.....</title>
+    <title>My Apology, My Love</title>
     <style>
         body {
-            background-color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            background: linear-gradient(to right, #ff7f50, #ff1493);
+            font-family: 'Georgia', serif;
             margin: 0;
-            font-family: 'Arial', sans-serif;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 400px;
             text-align: center;
+            backdrop-filter: blur(10px);
+            overflow: hidden;
         }
+
         h1 {
-            color: #ff007f;
+            color: #ff1493;
             font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
+
         p {
-            font-size: 1.5rem;
-            color: #333;
+            color: #444;
+            font-size: 1.3rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-weight: normal;
         }
+
         button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1rem;
-            background-color: #ff007f;
+            padding: 15px 35px;
+            font-size: 1.3rem;
+            background-color: #ff1493;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-transform: uppercase;
         }
+
         button:hover {
-            background-color: #ff4da6;
+            background-color: #ff007f;
+            transform: translateY(-3px);
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        .message {
+            font-size: 1.4rem;
+            color: #ff007f;
+            font-weight: bold;
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ffebef;
+            border-radius: 5px;
+            transition: opacity 0.5s ease-in-out;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        .footer a {
+            color: #ff1493;
+            text-decoration: none;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
-    
-    <button onclick="showMessage()">Click Me!</button>
-    <p id="surprise" style="display: none;">  <h1>I'm Truly Sorry</h1>
 
-        <p>Dear [His Name],</p>
-        <p>I hope you're doing well. I've been thinking about what happened recently, and I need to take a moment to sincerely apologize.</p>
-        <p>I realize now that I misunderstood what you said, and I want you to know that I never intended to hurt or upset you in any way. I got caught up in my own thoughts, and in doing so, I misinterpreted your words. Please understand that it wasn't my intention to make you feel unimportant or misunderstood.</p>
-        <p>You mean so much to me, and I regret that my actions may have caused any discomfort. I value our relationship deeply, and I never want a misunderstanding like this to come between us.</p>
-        <p>I hope you can find it in your heart to forgive me, and we can move forward, stronger and with even more understanding of each other. I promise to be more careful with my words and reactions in the future.</p>
-        <p>Thank you for your patience, and I truly appreciate your love and support. I look forward to talking to you and clearing things up.</p>
-        <p>With all my love, <br> [Your Name]</p>
-    </p>
-
+    <div class="container">
+        <h1>My Love...</h1>
+        <p>Sometimes I misunderstand things. I'm deeply sorry for any hurt I've caused you, and I just want to make it right.</p>
+        <button onclick="showMessage()">Click me</button>
+        <p class="message" id="message">❤️ I’m sorry from the bottom of my heart. Your love means everything to me, and I promise to be better. 💖</p>
+        <div class="footer">
+            <p>All my love, always. <a href="#">Let's talk ...</a></p>
+        </div>
+    </div>
     <script>
         function showMessage() {
-            const surprise = document.getElementById('surprise');
-            surprise.style.display = 'block';
+            const message = document.getElementById('message');
+            message.style.display = 'block';
+            message.style.opacity = 1;
         }
     </script>
+
 </body>
 </html>
