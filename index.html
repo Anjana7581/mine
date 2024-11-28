@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Apology, My Love</title>
+    <title>Welcome</title>
     <style>
         body {
             background: linear-gradient(to right, #ff7f50, #ff1493);
@@ -104,21 +104,34 @@
 <body>
 
     <div class="container">
-        <h1>My Love...</h1>
-        <p>Sometimes I misunderstand things. I'm deeply sorry for any hurt I've caused you, and I just want to make it right.</p>
-        <button onclick="showMessage()">Click me</button>
-        <p class="message" id="message">❤️ I’m sorry from the bottom of my heart. Your love means everything to me, and I promise to be better. 💖</p>
+        <h1>Welcome to Our Website</h1>
+        <p></p>
+        <button id="toggleButton" onclick="showMessage()">Explore Now</button>
+        <p class="message" id="message">❤️ We are pleased to have you visit. Should you need any assistance or have any inquiries, please do not hesitate to contact us. We hope you find what you are looking for.</p>
         <div class="footer">
-            <p>All my love, always. <a href="#">Let's talk ...</a></p>
+            <!-- <p>All my love, always. <a href="#">Let's talk ...</a></p> -->
         </div>
     </div>
+
     <script>
         function showMessage() {
             const message = document.getElementById('message');
-            message.style.display = 'block';
-            message.style.opacity = 1;
+            const button = document.getElementById('toggleButton');
+            
+            // Check if the message is already visible
+            if (message.style.display === 'block') {
+                // If message is visible, hide it and change button text back to "Explore Now"
+                message.style.display = 'none';
+                button.textContent = 'Explore Now';
+            } else {
+                // If message is not visible, show it and change button text to "Hide Message"
+                message.style.display = 'block';
+                message.style.opacity = 1;
+                button.textContent = 'Hide Message';
+            }
         }
     </script>
 
 </body>
+
 </html>
